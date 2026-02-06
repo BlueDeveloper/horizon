@@ -101,6 +101,7 @@ pipeline {
             exit 1
           fi
 
+
           # 파일 권한 설정 (Nginx가 읽을 수 있도록)
           sudo -n /usr/bin/find /opt/horizon-fe -type d -exec /bin/chmod 755 {} \\;
           sudo -n /usr/bin/find /opt/horizon-fe -type f -exec /bin/chmod 644 {} \\;
