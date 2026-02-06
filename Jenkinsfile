@@ -6,11 +6,9 @@
 pipeline {
   agent any
 
-  // Jenkins Global Tool Configuration에서 설정한 Node.js 버전 사용
-  // Jenkins 관리 → Global Tool Configuration → NodeJS 항목에서 'node20' 추가 필요
-  tools {
-    nodejs 'node20'  // 필요한 Node.js 버전으로 변경 (예: node18, node20 등)
-  }
+  // NodeJS Plugin 미설치 시 tools 블록 제거
+  // Node.js가 Jenkins 서버에 직접 설치되어 있어야 함
+  // 설치 확인: node -v, npm -v
 
   stages {
     // =================================================================
